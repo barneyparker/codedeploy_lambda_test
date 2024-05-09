@@ -6,6 +6,7 @@ phases:
       nodejs: 20
   build:
     commands:
+      - aws --version
       - node --version
       - npm --version
       - ls -lha
