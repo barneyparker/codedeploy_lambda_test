@@ -5,15 +5,17 @@ const appspec = {
   version: 0.0,
   resources: [
     {
-      type: 'lambda',
-      name: 'myLambda',
-      properties: {
-        alias: 'production',
-        currentVersion: '1',
-        targetVersion: '2',
-      },
-    },
-  ],
+      "myLambdaFunction": {
+        Type: 'AWS::Lambda::Function',
+        Properties: {
+          Name: 'myLambda',
+          Alias: 'production',
+          CurrentVersion: '1',
+          TargetVersion: '2',
+        }
+      }
+    }
+  ]
 }
 
 // write the appspec file to disk
