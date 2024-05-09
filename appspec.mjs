@@ -8,8 +8,8 @@ const appspec = {
       "myLambdaFunction": {
         Type: 'AWS::Lambda::Function',
         Properties: {
-          Name: 'myLambda',
-          Alias: 'production',
+          Name: process.env.LAMBDA_FUNCTION_NAME || 'unknown-function-name',
+          Alias: process.env.LAMBDA_ALIAS_NAME || 'unknown-alias-name',
           CurrentVersion: '1',
           TargetVersion: '2',
         }
