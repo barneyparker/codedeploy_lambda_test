@@ -4,11 +4,13 @@ phases:
   install:
     runtime-versions:
       nodejs: 20
-  pre_build:
+  build:
     commands:
       - node --version
       - npm --version
+      - ls -lha
       - npm run appspec
+      - ls -lha
 artifacts:
   files:
     - appspec.json
