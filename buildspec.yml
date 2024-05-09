@@ -6,12 +6,7 @@ phases:
       nodejs: 20
   build:
     commands:
-      - aws --version
-      - node --version
-      - npm --version
-      - ls -lha
-      - npm run appspec
-      - ls -lha
+      - node deploy.mjs
 artifacts:
   files:
     - appspec.json

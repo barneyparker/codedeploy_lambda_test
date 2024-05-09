@@ -4,13 +4,13 @@
   "description": "",
   "type": "module",
   "scripts": {
-    "appspec": "node appspec.mjs",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@aws-sdk/client-lambda": "^3.572.0"
+    "@aws-sdk/client-lambda": "^3.572.0",
+    "zip-a-folder": "^3.1.6"
   }
 }
