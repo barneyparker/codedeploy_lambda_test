@@ -1,0 +1,15 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 20
+  pre_build:
+    commands:
+      - node --version
+      - npm --version
+      - npm run appspec
+artifacts:
+  files:
+    - appspec.json
+  discard-paths: yes
